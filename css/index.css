@@ -1,0 +1,639 @@
+body {
+  background: #f7f7f7;
+
+}
+/* 在移动端会有一些元素出现手指触摸之后出现背景颜色 去除掉 */
+/* 在ios系统中 所有input都会自带一个内阴影  你通过很多方法都去除不掉 */
+/* -webkit-appearance: none; 可以去除掉内阴影 */
+/*   */
+* {
+  -webkit-tap-highlight-color: transparent;
+  
+}
+body,html{
+  margin-bottom: 44px;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #c91523;
+  z-index: 10;
+  /* position: relative; */
+}
+header .logo{
+  
+  display: block;
+  width: 56px;
+  height: 21px;
+  background: url("../images/jd-sprites.png") no-repeat;
+  background-size: 200px 200px;
+  background-position: 0 -109px;
+  position: absolute;
+  top: calc((40px - 21px) / 2 );
+  left: calc((75px - 56px) / 2 );
+}
+
+.search {
+  width: 100%;
+  height: 100%;
+  padding-left: 75px;
+  padding-right: 40px;
+  box-sizing: border-box;
+  position: relative;
+}
+.search input {
+  border: 0 none;
+  border: 1px solid #ccc;
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 5px;
+  padding-left: 25px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.search i{
+  display: block;
+  position: absolute;
+  top: 10px;
+  margin-left: 7px;
+  box-sizing: border-box;
+}
+header .login{
+  display: block;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  font-size: 14px;
+}
+/* 主体部分 */
+.content{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+}
+/* banner图 */
+.banner{
+  width: 100%;
+}
+.banner img{
+  width: 100%;
+}
+.content_list{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+ 
+}
+.content_list ul{
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.content_list li{
+  width: 25%;
+  float: left;
+  padding-top: 10px;
+  box-sizing: border-box;
+}
+.content_list li a{
+  display: block;
+  width: 100%;
+  text-align: center;
+
+}
+.content_list li a img{
+  width: 45px;
+  height: 45px;
+}
+.content_list li a span{
+  display: block;
+  margin-top: 5px;
+}
+
+/* 秒杀 */
+.seckill{
+  width: 100%;
+  background: #fff;
+  margin-top: 10px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.seckill_top{
+  height: 35px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+}
+.seckill_top h4{
+  color: #c91523;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 35px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  position: relative;
+  float: left;}
+.seckill_top h4:before{
+  content: "";
+  width: 20px;
+  height: 26px;
+  display: inline-block;
+  background: url('../images/jd-sprites.png') no-repeat;
+  background-size: 200px 200px;
+  background-position: -84px -107px;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+}
+.seckill_top .seckill_time{
+  float: left;
+  margin-top: 10px;
+  margin-left: 8px;
+}
+.seckill_top .seckill_time span{
+  display: block;
+  background: #000;
+  color: #fff;
+  float: left;
+  padding-top: 2px;
+  box-sizing: border-box;
+
+}
+/* 特殊字符串        odd(奇数)   even(偶数) */
+/* 数学表达式     -n+2  代表选中前两个但不能写成2-n */
+
+/* 元素是从1开始,nth:child选择器中的n是从0开始到正无穷; */
+.seckill_top .seckill_time span:nth-child(3n){
+    background-color: #fff;
+    color: #000;
+    margin: 0 2px;
+}
+.seckill_top .seckill_time span:nth-child(3n+1){
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  padding-left: 2px;
+}
+.seckill_top .seckill_time span:nth-child(3n+2){
+   border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding-right: 2px;
+}
+.seckill .seckill_top a{
+  /* display: block;
+  width: 100px;
+  height: 35px;  */
+  line-height: 35px;
+  float: right;
+  padding-right: 25px;
+}
+.seckill .seckill_top i{
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.seckill_list ul{
+  overflow: hidden;
+
+}
+.seckill_list ul li{
+  width: 33.3333%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+
+.seckill_list ul li a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.seckill_list ul li a img{
+  width: 100%;
+}
+
+.seckill_list ul li a span{
+  display: block;
+  width: 35px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  background: orange;
+  color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+
+}
+.seckill_list ul li .seck_list_price{
+  font-size: 14px;
+}
+.seckill_list ul li .seck_list_price p{
+    color: red;
+    height: 20px;
+    margin-top: 8px;
+}
+.seckill_list ul li .seck_list_price del{
+  display: block;
+  text-decoration:line-through;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+
+/* 亿万神券 */
+.metting{
+  position: relative;
+
+}
+.metting img{
+  width: 100%;
+  vertical-align: middle;
+}
+.metting ul{
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom:8px;
+  padding: 0 8px;
+  box-sizing: border-box;
+
+}
+
+.metting ul li{
+  float: left;
+  width: 50%;
+}
+.metting ul li a img{
+  width: 100%;
+}
+
+/* 热卖商品 */
+.hotsale ul{
+  overflow: hidden;
+}
+.hotsale ul li{
+  width: 100%;
+  float: left;
+}
+.hotsale ul .big a{
+  display: block;
+  width: 33.33%;
+  float: left;
+}
+.hotsale ul li img{
+  width: 100%;
+  vertical-align: middle;
+
+}
+.hotsale ul .small a{
+  width: 50%;
+  float: left;
+} 
+
+/* 生活旅行广告 */
+.adv{
+  width: 100%;
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+.adv img{
+  width: 100%;
+  vertical-align: middle;
+
+}
+/* 特色超市 */
+.market{
+  background: #fff;
+}
+.market h4,.theme h4,.brand h4{
+  color: red;
+  height: 35px;
+  line-height: 35px;
+  font-size: 16px;
+  font-weight: normal;
+  padding-left: 10px;
+  box-sizing: border-box;
+
+}
+.market ul,.theme ul{
+  overflow: hidden;
+}
+.market ul li{
+  float: left;
+  width: 100%;
+}
+.market li a{
+  width: 50%;
+  float: left;
+}
+.market li a img,.theme li a img,.brand li a img{
+  width: 100%;
+  vertical-align: middle;
+}
+/* .market .m_b a{
+  float: left;
+  width: 50%;
+} */
+
+/* 主题街 */
+.theme {
+  width: 100%;
+}
+
+.theme li {
+  width: 100%;
+  overflow: hidden;
+}
+
+.theme a {
+  display: block;
+}
+
+
+.theme li:nth-child(-n+3) {
+  float: left;
+  width: 50%;
+
+}
+
+.theme li:nth-child(3) a {
+  width: 50%;
+  float: left;
+}
+
+
+.theme li:last-child a {
+  float: left;
+  width: 25%;
+}
+/* 品牌推荐 */
+.brand{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+
+}
+.brand ul{
+  overflow: hidden;
+}
+.brand .m_t a{
+  float: left;
+}
+.brand .m_t a:first-child{
+  width: 40%;
+}
+.brand .m_t a:nth-child(2){
+  width: 30%;
+}
+.brand .m_t a:nth-child(3){
+  width: 30%;
+}
+
+/* 产品列表 */
+.product_list{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.product_list .list_title{
+  height: 35px;
+  line-height: 35px;
+  position: relative;
+/*   overflow: hidden; */
+}
+.product_list .list_title h4{
+  display: inline-block;
+  font-size: 14px;
+  color: #333;
+  font-weight: normal;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.product_list .list_title a{
+  display: block;
+  padding: 0 23px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  box-sizing: border-box;
+  color: red;
+}
+
+.product_list .list_title a:before{
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background-image: url("../images/icon-login.png");
+    background-size: 18px 18px;
+    background-position: center center;
+}
+.product_list .list_title a:after{
+    content: '';
+    position: absolute;
+    top: 10px;
+    /* right: 5px; */
+    width: 12px;
+    height: 12px;
+    background-image: url(../images/icon-right.png);
+    background-size: 4px 7px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.product_list .list_more{
+
+}
+.list_more ul{
+  width: 100%;
+  overflow: hidden;
+}
+
+.list_more ul li{
+  float: left;
+  width: 50%;
+  padding: 0 5px;
+  margin: 10px auto;
+  box-sizing: border-box;
+}
+.list_more ul li .bd{
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+.list_more ul li a img{
+  width: 100%;
+}
+.list_more ul li a p{
+  height: 40px;
+  margin: 10px auto;
+  font-size: 14px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+line-height: 20px;
+}
+.list_price span{
+  float: left;
+  color: red;
+  font-size: 14px;
+
+}
+.list_price a{
+  font-size: 14px;
+  float: right;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  display: block;
+  padding: 2px 3px;
+  margin-top: -5px;
+}
+
+
+/* 点击加载更多 */
+.getmore{
+  width: 100%;
+  height: 35px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.getmore a{
+  display: block;
+  text-align: center;
+  line-height: 35px;
+  font-size: 14px;
+  color: #666;
+}
+/* 底部 */
+.footer_top{
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+.footer_top a{
+
+  display: inline-block;
+  font-size: 14px;
+  color: #666;
+  /* position: relative; */
+}
+.footer_top a i{
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background: #666;
+  margin: 0px 20px 0px 20px;
+  /* position: absolute;
+  top: 8px;
+  left: 0px; */
+}
+.footer_mid {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.footer_mid ul{
+  overflow: hidden;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
+.footer_mid ul li{
+  /* display: inline-block; */
+  width: 33.33%;
+  float: left;
+  text-align: center;
+
+}
+.footer_mid ul li a{
+  display: block;
+   width: 45px;
+   margin: auto;
+    color: #848689;
+    font-size: 12px;
+    position: relative;
+
+}
+.footer_mid ul li a:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-image: url(../images/jd-sprites.png);
+    background-size: 200px 200px;
+    background-position: -115px -65px;
+}
+.footer_mid ul li a.mobile:before{
+      background-position: -35px -65px;
+}
+
+.footer_mid ul li a.computer:before{
+      background-position: -75px -65px;
+}
+.footer_bot{
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+}
+
+
+
+
+
+
+/* 尾部 */
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    border-top: 1px solid #f7f7f7;
+    background-color: #fff;
+    box-sizing: border-box;
+    z-index: 10;
+
+}
+footer ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+footer ul li{
+ flex: 1;
+ height: 100%;
+}
+footer ul li a{
+  width: 100%;
+  /* height: 100%;   */
+  display: block;
+  text-align: center;
+}
+footer ul li a img{
+  height: 44px;
+ 
+}
